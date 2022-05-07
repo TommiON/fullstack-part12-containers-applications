@@ -1,0 +1,54 @@
+Script started on Sat May  7 23:09:39 2022
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+[?1034hbash-3.2$ docker ex[K[K[K[K[K[K[K[K[Kdocker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED        STATUS        PORTS                     NAMES
+d84586ac7c8c   mongo     "docker-entrypoint.s…"   22 hours ago   Up 22 hours   0.0.0.0:3456->27017/tcp   todo-backend-mongo-1
+bash-3.2$ docker exec -it todo-backend-mongo-1 bash
+]0;root@d84586ac7c8c: /root@d84586ac7c8c:/# [K]0;root@d84586ac7c8c: /root@d84586ac7c8c:/# mongo -u root -p ecm  xample
+MongoDB shell version v5.0.7
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("1f2d027f-c386-41e6-bd19-f90cb8eb041c") }
+MongoDB server version: 5.0.7
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> use the_database[3G[Juse the_database[19G
+switched to db the_database
+> db.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("627597b346b25f426821f9c0"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("627597b346b25f426821f9c1"), "text" : "Learn about containers päivitetty taas", "done" : true }
+> db.todos.insertOne({text: 'Increase the number of tools in my toolbelt', doen[3G[Jdb.todos.insertOne({text: 'Increase the number of tools in my toolbelt', doe[79G[3G[Jdb.todos.insertOne({text: 'Increase the number of tools in my toolbelt', do[78Gne. [3G[Jdb.todos.insertOne({text: 'Increase the number of tools in my toolbelt', done.[81G[3G[Jdb.todos.insertOne({text: 'Increase the number of tools in my toolbelt', done[80G: true})[3G[Jdb.todos.insertOne({text: 'Increase the number of tools in my toolbelt', done: true})[88G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("6276d324895c5d9a0b1c5fb7")
+}
+> [3G[Jdb.todos.insertOne({text: 'Increase the number of tools in my toolbelt', done: true})[88G[3G[Jdb.todos.find({})[20G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("627597b346b25f426821f9c0"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("627597b346b25f426821f9c1"), "text" : "Learn about containers päivitetty taas", "done" : true }
+{ "_id" : ObjectId("6276d324895c5d9a0b1c5fb7"), "text" : "Increase the number of tools in my toolbelt", "done" : true }
+> exit[3G[Jexit[7G
+bye
+]0;root@d84586ac7c8c: /root@d84586ac7c8c:/# exit
+exit
+bash-3.2$ exit
+exit
+
+Script done on Sat May  7 23:14:51 2022
