@@ -9,6 +9,8 @@ db.createUser({
   ],
 });
 
+console.log('Mongo init, huhuu?')
+
 db.createCollection('todos');
 
 db.todos.insert({ text: 'Write code', done: true });
