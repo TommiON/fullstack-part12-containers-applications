@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  todo-front:
+    image: todo-frontend
+    ports:
+      - 5002:80
+    environment:
+      REACT_APP_BACKEND_URL: http://localhost:3000
