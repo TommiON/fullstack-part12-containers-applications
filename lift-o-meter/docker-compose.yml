@@ -1,0 +1,21 @@
+services:
+  front:
+    image: lif-front
+    build:
+      context: ./Front-Lift-o-Meter/ 
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./Front-Lift-o-Meter:/usr/src/app
+    ports:
+      - 3000:3000
+    environment:
+      - REACT_APP_BACKEND_URL=http://back:3001
+  back:
+    image: lift-back
+    build:
+      context: ./Back-Lift-o-Meter/ 
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./Back-Lift-o-Meter:/usr/src/app
+    ports:
+      - 3001:3001
