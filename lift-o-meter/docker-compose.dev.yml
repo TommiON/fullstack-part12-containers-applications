@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  front:
+    image: dev-lift-front
+    build:
+      context: ./Front-Lift-o-Meter/ 
+      dockerfile: ./dev.Dockerfile
+    volumes:
+      - ./Front-Lift-o-Meter:/usr/src/app
+    ports:
+      - 3000:3000
+  back:
+    image: dev-lift-back
+    build:
+      context: ./Backt-Lift-o-Meter/ 
+      dockerfile: ./dev.Dockerfile
+    volumes:
+      - ./Back-Lift-o-Meter:/usr/src/app
+    ports:
+      - 3001:3001
+

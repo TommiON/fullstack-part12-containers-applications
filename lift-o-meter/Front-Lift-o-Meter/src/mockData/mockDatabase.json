@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "name": "Tommi",
+      "admin": true,
+      "age": "25",
+      "id": 1
+    },
+    {
+      "name": "Hanna",
+      "admin": false,
+      "age": "40",
+      "id": 2
+    },
+    {
+      "name": "Natalia",
+      "admin": true,
+      "age": "12",
+      "id": 3
+    }
+  ],
+  "cycles": [],
+  "workouts": [],
+  "movesets": [
+    {
+      "id": 1,
+      "label": "penkki",
+      "repetitions": 5
+    },
+    {
+      "id": 2,
+      "label": "mave",
+      "repetitions": 5
+    },
+    {
+      "label": "mave",
+      "repetitions": 5,
+      "id": 6
+    },
+    {
+      "label": "penkki",
+      "repetitions": 4,
+      "id": 5
+    }
+  ]
+}
